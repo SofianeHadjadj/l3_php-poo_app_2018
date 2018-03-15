@@ -30,6 +30,16 @@ $ext = '';
           'id_user'=>$_SESSION['id'],
           'date_upload'=>$date_up
           ));
+
+         $to = "projetcapture@gmail.com";
+         $titre = $_POST['titre'].".".$ext;
+         $headers = "Fichier : $titre -- Page de validation : http://perso-cvtic.unilim.fr/DW02_2018/Capture/validation_fichiers.php";
+
+         $body = "Un nouveau fichier vient d'être uploader, merci de le valider ou de le refuser \n\n"; 
+
+         $send = mail($to, $body, $headers);
+       exit();
+
      }
      else //Sinon (la fonction renvoie FALSE).
      {
