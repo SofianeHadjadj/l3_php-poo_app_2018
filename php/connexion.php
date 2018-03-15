@@ -1,6 +1,7 @@
 <?php
 session_start(); // On démarre la session 
 include('connexion_BDD.php');
+$id=$_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,15 @@ include('connexion_BDD.php');
 
 <body>
     <div id="authentification">
+        <?php
+        if (isset($id)) {
+        ?>
+        <p>Vous êtes bien connecté à l'application Capture</p>
+        <a href="deconnexion.php">Deconnexion</a>
+        <?php
+        }
+        else{
+        ?>
 	<h2>Bienvenue sur l'application Capture, merci de vous authentifier.</h2>   
         <form id="formulaire" action="" method="post">
         <fieldset>
@@ -26,6 +36,7 @@ include('connexion_BDD.php');
         </p>
     </div>
 <?php  
+        }
 if (isset($_POST['ident']) AND isset($_POST['pass'])){
     // Sécurité
     $IDENT=$_POST['ident'];
@@ -36,22 +47,27 @@ if (isset($_POST['ident']) AND isset($_POST['pass'])){
             echo '<p>Cliquez <a href="index.php">ici</a> pour revenir</p>';
         }
         else{ //On check le mot de passe et l'id
-            $donnee=$connex->query("SELECT * FROM utilisateurs WHERE identifiant='$IDENT'");
+            $donnee=$dbh->query("SELECT * FROM utilisateurs WHERE identifiant='$IDENT'");
             while($acces = $donnee->fetch()){
                 if ($acces['mdp'] == $_POST['pass']) {
-                    echo'<p>Vous êtes maintenant connecté!</p> <p>Cliquez <a href="accueil.php">ici</a> pour accéder à la page d accueil</p>';  
+                    echo'<p>Vous êtes maintenant connecté !</p>';  
                     $nom=$acces['nom'];
                     $prenom=$acces['prenom'];
+                    $id=$acces['id'];
                     $_SESSION['nom'] = $nom;
                     $_SESSION['prenom'] = $prenom;
+                    $_SESSION['id'] = $id;
                 }
                 else{ // Acces pas OK !
                     echo"<p>Une erreur s'est produite pendant votre identification.<br /> Le mot de passe ou le pseudo entré n'est pas correct.</p><p>Cliquez <a href='./index.php'>ici</a>pour revenir à la page précédente</p>";
                 }
+                
             }
             $donnee->closeCursor();
         }
 }
+echo '<p>Cliquez <a href="index.php">ici</a> pour revenir</p>';
+//echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
 
 ?>
 

@@ -1,6 +1,7 @@
 <?php
-    $module=$_GET['module'];
-    include('connexion_BDD.php');
+session_start(); // On démarre la session 
+include('connexion_BDD.php');
+$module=$_GET['module'];
 ?>
 
 <html>
@@ -49,7 +50,7 @@
             // Sécurité
             if(preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $MAIL)){ // on vérifie si l'email à un format valide.
                 if($MDP == $MDP_VERIF){ // on vérifie que les deux mots de passe soient identique.
-                    $connex->exec("INSERT INTO validation (nom, prenom, identifiant, mail, mdp) VALUES ('$NOM','$PRENOM','$IDENTIFIANT','$MAIL','$MDP')");
+                    $dbh->exec("INSERT INTO validation (nom, prenom, identifiant, mail, mdp) VALUES ('$NOM','$PRENOM','$IDENTIFIANT','$MAIL','$MDP')");
                     echo "<br><p>Données enregistrées, vous allez bientôt recevoir un e-mail confirmant votre inscription</p><br>";
                     echo '<p><a href="connexion.php">Se connecter</a></p>';
                 }
