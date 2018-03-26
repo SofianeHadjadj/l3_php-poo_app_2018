@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Eido';
+    src: url('eido.eot') format('eot'),
+         url('eido.woff') format('woff'),
+         url('eido.ttf') format('truetype'),
+         url('eido.otf') format('otf'),
+         url('eido.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenDyslexic-Regular';
+    src: url('OpenDyslexic-Regular.otf'),
+    	 url('OpenDyslexic-Regular.eot') format('eot'),
+    	 url('OpenDyslexic-Regular.woff') format('woff');
+}
+
+body {
+    background-color: white;
+	font: 1em;
+	font-family:Verdana,"Lucida Sans","Lucida Sans Unicode",sans-serif;
+}
+
+#origines{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1{
+	display: none;
+}
+
+.image2{
+	display: initial;
+}
+
+.democlass {
+    background-color: red;
+	font: 2em Verdana;
+	font-weight:bold;
+	color: white;
+}
+
+.democlass2 {
+    background-color: black;
+	color: white;
+	font: 2em Tahoma;
+}
+
+.bouton{
+    padding:6px 0 6px 0;
+	font:Bold 13px Arial;
+	background:#d34836;
+	color:#fff;
+	width:90px;
+	border-radius:10px;
+	border:none;
+}
+
+.bouton1{
+    padding:6px 0 6px 0;
+	font:Bold 13px Arial;
+	background:#33CC99;
+	color:#fff;
+	width:90px;
+	border-radius:10px;
+	border:none;
+}
+
+.bouton2{
+	font:13px Arial;
+}
+
+.border1{
+	border-style: solid;
+	border-color: white;
+	border-width: 5px;
+	margin-top: 10px;
+	margin-right: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}

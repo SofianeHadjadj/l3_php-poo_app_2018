@@ -3,10 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+
     <title>Capture</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png">
+    
+    <link rel="shortcut icon" href="vues/assets/images/favicon.png">
 
     <!-- Liens des bibliothèques en ligne -->
 
@@ -15,14 +19,17 @@
 
     <!-- Liens des bibliothèques locales -->
 
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/material.min.js"></script>
-    <link rel="stylesheet" href="assets/css/mdpp.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/carousel.css">
+    <script src="vues/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="vues/assets/js/material.min.js"></script>
+    <link rel="stylesheet" href="vues/assets/css/mdpp.min.css">
+    <link rel="stylesheet" href="vues/assets/css/styles.css">
+    <link rel="stylesheet" href="vues/assets/css/carousel.css">
     <style>
     html,body,#docker,#videos,#mainVid,#vidCont,#cinCont {
       width: 100%;
+    }
+    h3 {
+      text-align: center;
     }
     #cinCont, #docCont, #oeuvCont {
       padding-top: 50px;
@@ -42,13 +49,13 @@
       height: 176px;
     }
     .demo-card-wide > .mdl-card__titleCi {
-      background: url('assets/images/film.jpg') center / cover;
+      background: url('vues/assets/images/film.jpg') center / cover;
     }
     .demo-card-wide > .mdl-card__titleDo {
-      background: url('assets/images/doc.jpg') center / cover;
+      background: url('vues/assets/images/doc.jpg') center / cover;
     }
     .demo-card-wide > .mdl-card__titleOe {
-      background: url('assets/images/oeuvre.jpg') center / cover;
+      background: url('vues/assets/images/oeuvre.jpg') center / cover;
     }    
     .demo-card-wide > .mdl-card__menu {
       color: #fff;
@@ -105,7 +112,7 @@
           </button>
         </div>
         <div class="mdl-layout__header-row">
-          <div id="contLogo"><img src="assets/images/logo_white.png" width="100%"></div>
+          <div id="contLogo"><img src="vues/assets/images/logo_white.png" width="100%"></div>
           <div id="login" class="mdl-layout--large-screen-only">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" style="margin-right: 15px">
               connexion
@@ -140,9 +147,15 @@
         <!-- Partie Accueil -->
 
         <div class="mdl-layout__tab-panel is-active" id="accueil">
-          <h3 style="text-align: center;">Dérniers médias en ligne</h3>
+          <h3>Dérniers médias en ligne</h3>
+
+          <!-- Partie Carousel -->
+
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
             <div class="secondary-slider mdl-shadow--4dp" style="min-height: 500px">
+
+              <!-- 1er Slide -->
+
               <div class="t-slide current-t-slide text-slider">
                   <img src="https://picsum.photos/1800/900?image=868" alt="" />
                   <div class="t-slide-content">
@@ -160,6 +173,9 @@
                       </button>  
                   </div>
                 </div>
+
+                <!-- 2ème Slide -->
+
                 <div class="t-slide text-slider">
                   <img src="https://picsum.photos/1800/900?image=839" alt="" />
                   <div class="t-slide-content">
@@ -177,7 +193,10 @@
                       </button>                    
                   </div>
                 </div>
-                    <div class="t-slide text-slider">
+
+                <!-- 3ème Slide -->
+
+                <div class="t-slide text-slider">
                   <img src="https://picsum.photos/1800/900?image=821" alt="" />
                   <div class="t-slide-content">
                     <h4>Titre</h4>
@@ -194,6 +213,9 @@
                       </button>  
                   </div>
                 </div>
+
+                <!-- Controleurs du Carousel -->
+
               <div class="t-slider-controls">
                 <div class="arrow right-arrow">
                   <div class="arrow-container">
@@ -213,89 +235,63 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </section>
 
+          <!-- Fin de la partie Carousel -->
+
+          <!-- Partie Articles -->
+
+          <h3>Articles</h3>
+
+          <!-- Première ligne d'articles -->
+
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
-            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-              <i class="material-icons">play_circle_filled</i>
-            </header>
-            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card mdl-cell mdl-cell--6-col">
               <div class="mdl-card__supporting-text">
-                <h4>Features</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text">
-                <h4>Technology</h4>
+                <h4>Article</h4>
                 Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
               </div>
               <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
+                <a href="#" class="mdl-button">Lire la suite</a>
               </div>
             </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
+            <div class="mdl-card mdl-cell mdl-cell--6-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Article</h4>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Lire la suite</a>
+              </div>
+            </div>            
           </section>
+
+          <!-- Seconde ligne d'articles -->
+
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
+            <div class="mdl-card mdl-cell mdl-cell--6-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Article</h4>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Lire la suite</a>
+              </div>
+            </div>
+            <div class="mdl-card mdl-cell mdl-cell--6-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Article</h4>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Lire la suite</a>
+              </div>
+            </div>            
+          </section>          
+
+          <!-- Fin de la partie Articles -->
 
           <section></section>
 
@@ -437,7 +433,7 @@
 
       </main>
     </div>
-    <script src="assets/js/carousel.js"></script>
+    <script src="vues/assets/js/carousel.js"></script>
     <script type="text/javascript">
     
     /* Fonction de séléction des parties à afficher */
