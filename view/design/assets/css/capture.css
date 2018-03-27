@@ -1,0 +1,261 @@
+    html,body,#docker,#membre,#ebook,#audios,#videos,.swi,#mainVid,#vidCont,#cinCont {
+      width: 100%;
+    }
+    h3 {
+      text-align: center;
+    }
+    #cinCont, #docCont, #oeuvCont {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .mdl-layout__tab-panel {
+      background-color: #F5F5F5 !important;
+    }
+
+    .card-inline {
+      display: inline-block !important;
+      margin-left: 5%;
+    }
+
+    .demo-card-wide.mdl-card {
+      width: 40%;
+    }
+    .demo-card-wide > .mdl-card__title {
+      color: #fff;
+      height: 176px;
+    }
+    .demo-card-wide > .mdl-card__titleCi {
+      background: url('../images/film.jpg') center / cover;
+    }
+    .demo-card-wide > .mdl-card__titleDo {
+      background: url('../images/doc.jpg') center / cover;
+    }
+    .demo-card-wide > .mdl-card__titleOe {
+      background: url('../images/oeuvre.jpg') center / cover;
+    }    
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    .mdl-card__title-text {
+      background-color: rgba(0,0,0,0.5);
+      padding: 5px;
+    }
+    #contLogo {
+      width: 200px;
+    }
+    #login {
+      position: absolute;
+      right: 50px
+    }
+    #btnLog {
+      display: none;
+    }
+    @media screen and (max-width: 1025px) {
+      #contLogo {
+        width: 100px;
+        margin-top: -50px;
+      }
+      #btnLog {
+        display: block;
+        position: absolute; 
+        top: 15px; 
+        right: 15px;
+      }
+    }
+    @media screen and (max-width: 620px) {
+      #cinCont, #docCont, #oeuvCont {
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+      .demo-card-wide.mdl-card {
+        width: 96%;
+      } 
+    .card-inline {
+      display: block !important;
+      margin-left: 0;
+    }           
+    }  
+    
+    #mSpace {
+      height: 800px;
+    }
+    #topSpace {
+      width: 100%;
+      height: 65%;
+    }
+    #rightSpace {
+      width: 49%;
+      height: 95%;
+      float: left;
+    }
+    #leftSpace {
+      width: 48%;
+      height: 95%;
+      float: left;
+      padding: 1%;
+    }
+    #botSpace {
+      width: 100%;
+      height: 35%;
+    }
+    #favCont {
+      background-color: white;
+      width: 100%;
+      height: 100%;
+    }
+    #infoCont {
+      background-color: white;
+      width: 100%;
+      height: 48.5%;
+      margin-top: 2%;
+      padding-left:20px;
+    }
+    #histoCont {
+      background-color: white;
+      width: 100%;
+      height: 48.5%;
+      margin-top: 2%
+    }
+    #uplCont {
+      background-color: white;
+      width: 98%;
+      height: 100%;  
+      margin: auto;    
+    }
+    #postFile{
+      margin-top: 30px
+    }
+    .wrappUpl {
+      width: 33%;
+      height: 100%; 
+      float: left;
+    }
+
+    @media screen and (max-width: 940px) {
+      #mSpace {
+        height: 1600px;
+      }
+      #topSpace {
+        width: 100%;
+        height: 1000px;
+        margin-bottom: 60px;
+      }
+      #rightSpace {
+        width: 98%;
+        height: 500px;
+        float: none;
+      }
+      #leftSpace {
+        width: 98%;
+        height: 500px;
+        float: none;
+        padding: 0;
+      }
+      #botSpace {
+        width: 100%;
+        height: 600px;
+      }
+      #favCont {
+        background-color: white;
+        width: 100%;
+        height: 500px;
+      }
+      #infoCont {
+        background-color: white;
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        padding-left:20px;
+      }
+      #histoCont {
+        background-color: white;
+        width: 100%;
+        height: 250px;
+        margin-top: 2%
+      }
+      #uplCont {
+        background-color: white;
+        width: 98%;
+        height: 500px;
+        margin-top: 0;    
+        margin-left: 0;
+        margin-bottom: -60px;
+      }
+      .wrappUpl {
+        width: 98%;
+        height: 33%; 
+        float: none;
+      }
+      .emGrBt {
+         margin-left: 20px;
+      }
+  }
+
+    .weiLight {
+      font-weight: normal;
+    }
+
+.hideIfDesign {
+  display: none;
+}
+
+    #cnxPage {
+      position: absolute;top:0;left: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.8);z-index: 999999999;display: none;
+    }
+    .cnxWrapp {
+      position: relative;margin: auto;width: 33%;height: 30%;
+    }
+    #cnxCard {
+      position: relative;margin: auto;width: 33%;height: 40%;background-color:white 
+    }
+    @media screen and (max-width: 1025px) {
+      #cnxCard {
+        width: 65%
+      }
+    }
+    @media screen and (max-width: 620px) {
+      #cnxCard {
+        width: 90%
+      }
+    }
+
+  .mdl-description {
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+  }
+  .mdl-card-margin {
+    margin-bottom: 30px;
+  }
+
+                #wrappVid {
+                width: 100%;height: 700px;
+              }
+              #contSVid {
+                width: 100%; height: 100%
+              }
+              .subCSV {
+                width: 47%;height: 100%; float: left;
+              }
+              #subCSV1{
+                margin-left: 50px;
+              }
+                #subCSV1, #subCSV2{
+                  margin-bottom: 150px;
+                }
+              @media screen and (max-width: 1220px) {
+                #wrappVid {
+                  width: 100%;height: 1000px;
+                }
+                #contSVid {
+                  width: 100%; height: 100%;
+                }
+                .subCSV {
+                  width: 95%;height: 500px; float: none;
+                }
+                #subCSV1, #subCSV2{
+                  margin-left: auto;
+                  margin-bottom: -50px;
+                }
+              }
