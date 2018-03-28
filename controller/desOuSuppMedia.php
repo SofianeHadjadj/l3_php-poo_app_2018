@@ -1,8 +1,7 @@
 <?php
-
     $selection=new ModeleFichier();
     $select=$selection->select();
-    echo "<h1>Média à desactiver/supprimer :</h1>";
+
     while($desactivation = $select->fetch()) {
         echo 'Titre : ';
         echo $desactivation['titre'];
@@ -22,10 +21,10 @@
         echo $desactivation['date_upload'];
         echo '<br/>';
         ?>
-        <a href="supprimer_media.php?action=desactiver&id=<?php echo $desactivation['id'] ?>" onclick="return(confirm('Etes vous sûr de vouloir désactiver ce média?'))">Désactiver </a>
-        <a href="supprimer_media.php?action=supprimer&id<?php echo $desactivation['id'] ?>" onclick="return(confirm('Etes vous sûr de vouloir supprimer ce média?'))">Supprimer </a>
+			<a href="supprimer_media.php?action=desactiver&id=<?php echo $desactivation['id'] ?>" onclick="return(confirm('Etes vous sûr de vouloir désactiver ce média?'))">Désactiver </a>
+			<a href="supprimer_media.php?action=supprimer&id=<?php echo $desactivation['id'] ?>" onclick="return(confirm('Etes vous sûr de vouloir supprimer ce média?'))">Supprimer </a>
         <?php        
-        echo '<br/>';
+			echo '<br/>';
     }
  
     if(isset($_GET['action']) AND isset($_GET['id'])) {
@@ -41,6 +40,5 @@
             $supprdesa=$supprimer->delete($id);
         }
     }
-
 
 ?>

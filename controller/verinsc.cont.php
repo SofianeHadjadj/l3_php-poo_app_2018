@@ -1,5 +1,4 @@
 <?php
-
     if ($module==2){
         // Sécurité
         $_SESSION['NOM']=mysql_real_escape_string(htmlspecialchars($_POST['nom']));
@@ -20,6 +19,14 @@
                 if($_SESSION['MDP'] == $MDP_VERIF){ // on vérifie que les deux mots de passe soient identique.
                     $inscrire=new ModeleValidation();
                     $inscription=$inscrire->inscription();
+
+                    echo "<div class='hideIfAcc' style='height:400px'>";
+                    echo "<h3>Incription effectué avec succès !</h3>";
+                    echo "<div style='width:400px;margin:auto'>";
+                    echo "<p>Vous allez recevoir d'ici peu un e-mail de confirmation.</p>";
+                    echo "<div><a href='index.php' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'>Retour &agrave; l'accueil</a></div>";
+                    echo "</div>";
+                    echo "</div>";
                 }
                 else{
                     echo "Vos mots de passe ne sont pas identiques.";

@@ -29,6 +29,7 @@ else {
 include('confortLecture.php'); 
 
 if ($_SESSION['statut'] == 1){
+        echo "<h1>Média à desactiver/supprimer :</h1>";
  include('../../controller/desOuSuppMedia.php');    
 }
 

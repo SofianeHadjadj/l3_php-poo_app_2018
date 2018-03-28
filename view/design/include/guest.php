@@ -1,11 +1,11 @@
       <header class="mdl-layout__header mdl-layout__header--scroll" style="background-color: #424242">
         <div class=" mdl-layout__header-row">
 
-          <form method="post">
+          <form method="post" action="../../index.php">
             <input type="hidden" name="mode" value="access">
-            <a href="../../index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-layout--small-screen-only" id="add">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-layout--small-screen-only" id="add">
               Confort de lecture
-            </a>            
+            </button>            
           </form>
 
         </div>
@@ -15,9 +15,9 @@
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect login" style="margin-right: 15px">
               connexion
             </button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            <a href="inscription.php?module=1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
               inscription
-            </button>            
+            </a>            
           </div>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
@@ -31,16 +31,16 @@
               <i class="material-icons">perm_identity</i>
             </button>
 
-          <form method="post">
+          <form method="post" action="../../index.php">
             <input type="hidden" name="mode" value="access">
-            <a href="../../index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add">
               Confort de lecture
-            </a>            
+            </button>            
           </form>
 
         </div>
       </header>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btnLog">
           <li class="mdl-menu__item login">Connexion</li>
-          <li class="mdl-menu__item">Inscription</li>
+          <li class="mdl-menu__item"><a href="inscription.php?module=1">Inscription</a></li>
         </ul> 

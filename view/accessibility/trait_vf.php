@@ -2,7 +2,7 @@
 session_start(); 
 include('../../model/connexion_BDD.php');
 include('../../model/ModeleFichiers.php');
-
+//Conservation du mode confort de lecture si celui ci existe
 if ($_POST['choixFunc'] != "") {
     $_SESSION['confort'] = $_POST['choixFunc'];
 }

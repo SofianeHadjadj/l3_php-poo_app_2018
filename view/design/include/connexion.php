@@ -11,24 +11,18 @@
             <div class="mdl-textfield mdl-js-textfield">
               <div style="float: left;">Identifiant : </div>
               <div style="float: left; margin-left: 5px;margin-top: -5px"><input class="mdl-textfield__input" type="text" id="identifiant" name="ident" style="display: inline"></div>
-
             </div>
+
             <div class="mdl-textfield mdl-js-textfield">
               <div style="float: left;">Mot de passe : </div>
               <div style="float: left; margin-left: 5px;margin-top: -5px"><input class="mdl-textfield__input" type="password" id="password" name="pass" style="display: inline"></div>
-
             </div>
-          
-        </div>
 
-        <div class="mdl-card__actions mdl-card--border">
-          <input type="submit" name="">
-
-          <!--
-          <a href="index.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Connexion
-          </a>
-          -->
+            <div class="mdl-textfield mdl-js-textfield" style="margin-top: 30px">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                connexion
+              </button>
+            </div>
 
         </div>
 

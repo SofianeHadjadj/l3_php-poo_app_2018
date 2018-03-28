@@ -1,19 +1,22 @@
 <?php
-session_start(); // On démarre la session 
-include('connexion_BDD.php');
-if ($_POST['choixFunc'] != "") {
-    $_SESSION['confort'] = $_POST['choixFunc'];
-}
-else {
-   $_SESSION['confort'] = $_SESSION['confort']; 
-}
+	session_start(); // On démarre la session 
+	//Conserve le confort de lecture
+	include('connexion_BDD.php');
+	if ($_POST['choixFunc'] != "") {
+		$_SESSION['confort'] = $_POST['choixFunc'];
+	}
+	
+	else {
+	   $_SESSION['confort'] = $_SESSION['confort']; 
+	}
 
-if ($_POST['choixPol'] != "") {
-    $_SESSION['police'] = $_POST['choixPol'];
-}
-else {
-   $_SESSION['police'] = $_SESSION['police']; 
-}
+	if ($_POST['choixPol'] != "") {
+		$_SESSION['police'] = $_POST['choixPol'];
+	}
+	
+	else {
+	   $_SESSION['police'] = $_SESSION['police']; 
+	}
 ?>
 <html>
     <head>
@@ -21,19 +24,17 @@ else {
         <link href="style.css" rel="stylesheet">
         <link rel="stylesheet" media="screen" href="confort_lecture/style.css" />
     </head>
+	<!--On conserve à nouveau le confort de lecture-->
     <body  onload="<?php echo $_SESSION['confort']; if ($_SESSION['confort'] != "") {echo '(); ';}?><?php echo $_SESSION['police']; if ($_SESSION['police'] != "") {echo '(); ';}?>">
         <?php include('confortLecture.php');
+			$to = "sofiane.hadjadj.tic@gmail.com";
+			$from = "Projet Capture";
+			$headers = "From: $from";
+			$body = "Un nouveau fichier vient d'être uploader, merci de le valider ou de le refuser :\n\n"; 
+			$send = mail($to, $body, $headers);
+			echo "Votre message a bien été envoyé";
+		  exit();
 
-    $to = "sofiane.hadjadj.tic@gmail.com";
-    $from = "Projet Capture";
-    $headers = "From: $from";
-
-    $body = "Un nouveau fichier vient d'être uploader, merci de le valider ou de le refuser :\n\n"; 
-
-    $send = mail($to, $body, $headers);
-    echo "Votre message a bien été envoyé";
-  exit();
-
-?>
-</body>
+		?>
+	</body>
 </html>

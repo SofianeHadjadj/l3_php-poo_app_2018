@@ -1,6 +1,4 @@
 <?php
-
-    $suppression=new ModeleUtilisateur($id);
-    $supprimer=$suppression->supprimer();
-
+$suppression=new ModeleUtilisateur($id);
+$supprimer=$suppression->supprimer();
 ?>

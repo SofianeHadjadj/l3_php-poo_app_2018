@@ -20,6 +20,13 @@ include ('../../controller/cnx.cont.php');
 
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+    <!-- Message d'information -->
+    
+    <?php include ('include/message.php');?>
+
+    <!-- Fin de message d'information -->
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="docker">
 
       <?php 
@@ -50,7 +57,19 @@ include ('../../controller/cnx.cont.php');
 
           <!-- Partie Show Video -->
 
-          <?php include ('include/showVideo.php'); ?>
+          <?php 
+
+            if ($_POST['type'] == "vid") {
+              include ('include/showVideo.php');
+            }
+            else if ($_POST['type'] == "aud") {
+              include ('include/showAudio.php');
+            }
+            else if ($_POST['type'] == "eb") {
+              include ('include/showEbook.php');
+            } 
+
+          ?>
 
           <!-- Fin de la partie Show Video -->
 
@@ -98,6 +117,7 @@ include ('../../controller/cnx.cont.php');
           $menu=new ModeleUtilisateur($id);
           $menuPersonnalise=$menu->afficheMenu();          
           if ($_SESSION['statut'] == 1){
+            include ('include/espMembre.php'); 
             include ('include/espAdmin.php'); 
           }
           else {
@@ -123,6 +143,7 @@ include ('../../controller/cnx.cont.php');
     <?php include ('include/connexion.php'); ?>
 
     <!-- Fin connexion -->
+
 
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/categories.js"></script>

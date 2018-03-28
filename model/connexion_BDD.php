@@ -1,12 +1,3 @@
-<?php /*
-     try {
-    $dbh = new PDO('mysql:host=localhost;dbname=DW02_2018', 'DW02_2018', '7iqpmyah');
-          } 
-          catch(Exception $e)
-          {
-            die('Erreur : ' . $e->getMessage());
-          }
-*/?>
 <?php
 //Cette classe permet de se connecter à la base de données
 class db {
@@ -24,6 +15,7 @@ class db {
         try
         {
             $dbh = new PDO("mysql:host=$this->_servername;dbname=$this->_dbname", $this->_username, $this->_password);
+			$dbh->exec("set names utf8");
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);                  
         }
         catch(Exception $e)

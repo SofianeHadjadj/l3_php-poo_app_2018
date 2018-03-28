@@ -11,22 +11,24 @@
                     <ul>
                       <?php
                         $fav=new ModeleFichier();
-                        $favoris=$fav->favorisMDesign($id);
+                        $favoris=$fav->favDesVid($id);
                       ?>
                     </ul>
                   </div>
                   <div class="mdl-tabs__panel" id="lannisters-panel">
                     <ul>
-                      <li>Tywin</li>
-                      <li>Cersei</li>
-                      <li>Jamie</li>
-                      <li>Tyrion</li>
+                      <?php
+                        $fav=new ModeleFichier();
+                        $favoris=$fav->favDesAud($id);
+                      ?>
                     </ul>
                   </div>
                   <div class="mdl-tabs__panel" id="targaryens-panel">
                     <ul>
-                      <li>Viserys</li>
-                      <li>Daenerys</li>
+                      <?php
+                        $fav=new ModeleFichier();
+                        $favoris=$fav->favDesEb($id);
+                      ?>
                     </ul>
                   </div>
                 </div>  

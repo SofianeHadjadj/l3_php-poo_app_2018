@@ -1,14 +1,12 @@
 <?php 
 
-session_start();
+	session_start();
+	header('location:../view/design/index.php');
+	include('../model/connexion_BDD.php');
+	include('../model/ModeleUtilisateurs.php');
 
-header('location:../view/design/index.php');
+	$id=$_SESSION['id'];
 
-include('../model/connexion_BDD.php');
-include('../model/ModeleUtilisateurs.php');
-
-$id=$_SESSION['id'];
-
-include ('cnx.cont.php');
+	include ('cnx.cont.php');
 
 ?>
