@@ -62,23 +62,25 @@ class ModeleUtilisateur extends db {
         $result->execute();
         echo "<h1>Utilisateurs à supprimer :</h1>";
         while($result1 = $result->fetch()) {
-            echo 'Nom: ';
-            echo $result1['nom'];
-            echo '<br/>';
-            echo ' Prenom : ';
-            echo $result1['prenom'];
-            echo '<br/>';
-            echo ' Identifiant: ';
-            echo $result1['identifiant'];
-            echo '<br/>';
-            echo ' Mot de passe: ';
-            echo $result1['mdp'];
-            echo '<br/>';
-            echo ' E-mail: ';
-            echo $result1['mail'];
-            echo '<br/>';
-            echo '<a href="supprimer.php?action=supprimer&id='.$result1['id'].'" onclick="return(confirm(\'Etes vous sûr de vouloir supprimer cet utilisateur?\'))">Supprimer </a>';
-            echo '<br/><br/>';
+            if ($result1['statut'] != 1) {
+                echo 'Nom: ';
+                echo $result1['nom'];
+                echo '<br/>';
+                echo ' Prenom : ';
+                echo $result1['prenom'];
+                echo '<br/>';
+                echo ' Identifiant: ';
+                echo $result1['identifiant'];
+                echo '<br/>';
+                echo ' Mot de passe: ';
+                echo $result1['mdp'];
+                echo '<br/>';
+                echo ' E-mail: ';
+                echo $result1['mail'];
+                echo '<br/>';
+                echo '<a href="supprimer.php?action=supprimer&id='.$result1['id'].'" onclick="return(confirm(\'Etes vous sûr de vouloir supprimer cet utilisateur?\'))">Supprimer </a>';
+                echo '<br/><br/>';
+            }
         }
 		
         if(isset($_GET['action']) AND isset($_GET['id'])) {
@@ -99,18 +101,20 @@ class ModeleUtilisateur extends db {
         $result=$this->connect()->query($sql);
         $result->execute();
         while($result1 = $result->fetch()) {
-            echo "<div class='espA5'>";
-			echo "<ul>";
-			echo '<li>Nom: '.$result1['nom'];			
-			echo '<li>Prenom : '.$result1['prenom'];			
-			echo '<li>Identifiant: '.$result1['identifiant'];			
-			echo '<li>Mot de passe: '.$result1['mdp'];			
-			echo '<li>E-mail: '.$result1['mail'];			
-			echo "</ul>";
-            echo "</div>";
-            echo "<div class='espA5 espA5btn'>";
-            echo '<a href="index.php?action=supprimer&id='.$result1['id'].'" onclick="return(confirm(\'Etes vous sûr de vouloir supprimer cet utilisateur?\'))" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="margin-right:15px">Supprimer </a>';
-            echo "</div>";
+            if ($result1['statut'] != 1) {
+                echo "<div class='espA5'>";
+                echo "<ul>";
+                echo '<li>Nom: '.$result1['nom'];           
+                echo '<li>Prenom : '.$result1['prenom'];            
+                echo '<li>Identifiant: '.$result1['identifiant'];           
+                echo '<li>Mot de passe: '.$result1['mdp'];          
+                echo '<li>E-mail: '.$result1['mail'];           
+                echo "</ul>";
+                echo "</div>";
+                echo "<div class='espA5 espA5btn'>";
+                echo '<a href="index.php?action=supprimer&id='.$result1['id'].'" onclick="return(confirm(\'Etes vous sûr de vouloir supprimer cet utilisateur?\'))" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="margin-right:15px">Supprimer </a>';
+                echo "</div>";
+            }
         }
 		
         if(isset($_GET['action']) AND isset($_GET['id'])) {
