@@ -72,8 +72,7 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id`, `identifiant`, `prenom`, `nom`, `mail`, `mdp`, `statut`, `date_inscription`) VALUES
-(12, 'admin', 'admin', 'admin', 'admin@admin.fr', 'admin', 1, '0000-00-00'),
-(23, 'so', 'sofiane', 'hadjadj', 'sofiane.hadjadj@etu.unilim.fr', 'so', 2, '2018-03-15');
+(12, 'admin', 'admin', 'admin', 'admin@admin.fr', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, '0000-00-00');
 
 -- --------------------------------------------------------
 

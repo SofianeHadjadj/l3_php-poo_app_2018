@@ -1,4 +1,4 @@
-          <h3>Dérniers médias en ligne</h3>
+          <h3>Derniers médias en ligne</h3>
 
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
             <div class="secondary-slider mdl-shadow--4dp" style="min-height: 500px">
@@ -8,18 +8,10 @@
               <div class="t-slide current-t-slide text-slider">
                   <img src="https://picsum.photos/1800/900?image=868" alt="" />
                   <div class="t-slide-content">
-                    <h4>Titre</h4>
-                    <p>Ma vidéo</p>
-
-                    <h4>Description</h4>
-                    <p style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p> 
-
-                    <h4>Uploader</h4>
-                    <p style="display: inline-block;">Sofiane Hadjadj</p>
-                      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="float: right; margin-right: 20px;">
-                        <i class="material-icons" role="presentation">input</i>
-                        <span class="visuallyhidden">View</span>
-                      </button>  
+                      <?php 
+                          $newCar1=new ModeleFichier();  
+                          $viewCarVid=$newCar1->viewCarousel1(); 
+                      ?>
                   </div>
                 </div>
 
@@ -28,18 +20,10 @@
                 <div class="t-slide text-slider">
                   <img src="https://picsum.photos/1800/900?image=839" alt="" />
                   <div class="t-slide-content">
-                    <h4>Titre</h4>
-                    <p>Ma audio</p>
-
-                    <h4>Description</h4>
-                    <p style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p> 
-
-                    <h4>Uploader</h4>
-                    <p style="display: inline-block;">Yoël Hazan</p>
-                      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="float: right; margin-right: 20px;">
-                        <i class="material-icons" role="presentation">input</i>
-                        <span class="visuallyhidden">View</span>
-                      </button>                    
+                      <?php 
+                          $newCar2=new ModeleFichier();  
+                          $viewCarAud=$newCar2->viewCarousel2(); 
+                      ?>                   
                   </div>
                 </div>
 
@@ -48,18 +32,10 @@
                 <div class="t-slide text-slider">
                   <img src="https://picsum.photos/1800/900?image=821" alt="" />
                   <div class="t-slide-content">
-                    <h4>Titre</h4>
-                    <p>Mon texte</p>
-
-                    <h4>Description</h4>
-                    <p style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p> 
-
-                    <h4>Uploader</h4>
-                    <p style="display: inline-block;">Oriana Dufrane</p>
-                      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="float: right; margin-right: 20px;">
-                        <i class="material-icons" role="presentation">input</i>
-                        <span class="visuallyhidden">View</span>
-                      </button>  
+                      <?php 
+                          $newCar3=new ModeleFichier();  
+                          $viewCarEb=$newCar3->viewCarousel3(); 
+                      ?>  
                   </div>
                 </div>
 

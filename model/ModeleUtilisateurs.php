@@ -37,7 +37,7 @@ class ModeleUtilisateur extends db {
     //Permet de se connecter en vérifiant dans la bdd si l'utilisateur existe
     public function connexion() {
         $IDENT=$_SESSION['IDENT'];
-        $PASS=$_SESSION['PASS'];
+        $PASS=sha1($_SESSION['PASS']);
         $sql="SELECT * FROM utilisateurs WHERE identifiant='$IDENT'";
         $result=$this->connect()->query($sql);
         $result->execute();
@@ -132,7 +132,7 @@ class ModeleValidation extends db {
 
 	//permet d'insérer dans une table provisoire un utilisateur qui s'inscrit
     public function inscription() {
-        $sql = "INSERT INTO validation (identifiant, prenom, nom, mail, mdp, statut, date_inscription) VALUES('".$_SESSION['IDENTIFIANT']."', '".$_SESSION['PRENOM']."', '".$_SESSION['NOM']."', '".$_SESSION['MAIL']."', '".$_SESSION['MDP']."', '0', '".date('Y-m-d')."')";
+        $sql = "INSERT INTO validation (identifiant, prenom, nom, mail, mdp, statut, date_inscription) VALUES('".$_SESSION['IDENTIFIANT']."', '".$_SESSION['PRENOM']."', '".$_SESSION['NOM']."', '".$_SESSION['MAIL']."', '".sha1($_SESSION['MDP'])."', '0', '".date('Y-m-d')."')";
         $result=$this->connect()->exec($sql);
         echo "<div class='hideIfDesign'><br><p>Données enregistrées, vous allez bientôt recevoir un e-mail confirmant votre inscription</p><br>";
         echo '<p><a href="connexion.php">Se connecter</a></p></div>';

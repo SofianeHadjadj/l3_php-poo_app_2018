@@ -7,9 +7,9 @@ class db {
     private $_dbname;
 //connexion au serveur, nom, mdp et BDD   
     protected function connect() {
-        $this->_servername="localhost";
+        $this->_servername="INCLUDE_HERE_YOUR_DATABASE-SERVER-NAME";
         $this->_username="DW02_2018";
-        $this->_password="7iqpmyah";
+        $this->_password="INCLUDE_HERE_YOUR_PASSWORD";
         $this->_dbname="DW02_2018";
 //Vérifie si tout va bien dans la connexion                
         try

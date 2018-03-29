@@ -74,7 +74,7 @@
 				?>
 
 					<div class="demo-card-wide mdl-card mdl-shadow--4dp card-inline mdl-card-margin">
-						<div class="mdl-card__title mdl-card__titleCi">
+						<div class="mdl-card__title mdl-card__titleDo">
 							<h2 class="mdl-card__title-text"><?php echo $donnees['titre'] ?></h2>
 						</div>
 						<div class="mdl-card__supporting-text mdl-description">
@@ -129,7 +129,7 @@
 				?>
 
 					<div class="demo-card-wide mdl-card mdl-shadow--4dp card-inline mdl-card-margin">
-						<div class="mdl-card__title mdl-card__titleCi">
+						<div class="mdl-card__title mdl-card__titleOe">
 							<h2 class="mdl-card__title-text"><?php echo $donnees['titre'] ?></h2>
 						</div>
 						<div class="mdl-card__supporting-text mdl-description">

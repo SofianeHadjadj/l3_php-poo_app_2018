@@ -238,8 +238,11 @@
                 #wrappVid {
                 width: 100%;height: 700px;
               }
+                #wrappVidBig {
+                width: 100%;height: 600px !important
+              }              
               #contSVid {
-                width: 100%; height: 100%
+                width: 100%; height: 600px
               }
               .subCSV {
                 width: 47%;height: 100%; float: left;
@@ -248,7 +251,7 @@
                 margin-left: 50px;
               }
                 #subCSV1, #subCSV2{
-                  margin-bottom: 150px;
+       
                 }
               @media screen and (max-width: 1220px) {
                 #wrappVid {
@@ -311,7 +314,7 @@
   /* message d'alert */
 
   #message {
-    width: 300px !important;height: 50px !important;background-color : #CCE5FF !important;color: #00408D !important; position: absolute !important;top: 200px !important; z-index: 99999999 !important;
+    width: 400px !important;height: 70px !important;background-color : #CCE5FF !important;color: #00408D !important; position: absolute !important;top: 200px !important; z-index: 99999999 !important;
     padding-top: 15px;
     padding-left: 15px;
     margin-left: 40%;

@@ -6,7 +6,8 @@
             if ($_POST['extension'] != "") {
             ?>
               <div id="wrappViv">
-
+                <h3><?php echo $_POST['titre'];?></h3>
+                <div style="width: 1px;height: 50px;"></div>
                 <form method="post" action="">
                   <input type="hidden" name="extension" value="">
                   <button type="submit" class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent" style="position: absolute;top: 70px;right: 70px" id="clsVid">
@@ -19,7 +20,7 @@
 
                 <div id="contSVid">
                   <div id="subCSV1" class="subCSV" style="margin-right: 30px">
-                    <iframe src="<?php echo $lien;  ?>" width="550px" height="350px" class="mdl-shadow--4dp"></iframe>  
+                    <iframe src="<?php echo $lien;  ?>" width="550px" height="500px" class="mdl-shadow--4dp"></iframe>  
                   </div>
 
                    <div class="subCSV" id="subCSV2">

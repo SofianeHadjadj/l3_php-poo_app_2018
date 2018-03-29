@@ -50,14 +50,18 @@ $module=$_GET['module'];
 						echo     $donnees['categorie']."<br>";
 						echo     $donnees['id_user']."<br>";
 						echo     $donnees['date_upload']."<br><br>";
-		?>
-						<form method="post" action="add_fav.php">
-							<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
-							<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-							<input type="hidden" name="id_file" value="<?php echo $donnees['id']; ?>">
-							<input type="submit" value="Ajouter aux favoris">
-						</form>
-
+						
+						if ($_SESSION['statut'] >= 1){
+		?>				
+							<form method="post" action="add_fav.php">
+								<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
+								<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
+								<input type="hidden" name="id_file" value="<?php echo $donnees['id']; ?>">
+								<input type="submit" value="Ajouter aux favoris">
+							</form>
+		<?php			
+						}
+		?>					
 						<form method="post" action="show_video.php">
 							<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
 							<input type="hidden" name="description" value="<?php echo $donnees['description']; ?>">
@@ -87,12 +91,23 @@ $module=$_GET['module'];
 						echo     $donnees['categorie']."<br>";
 						echo     $donnees['id_user']."<br>";
 						echo     $donnees['date_upload']."<br><br>";
-		?>
-						<form method="post" action="add_fav.php">
+						
+						if ($_SESSION['statut'] >= 1){
+		?>				
+							<form method="post" action="add_fav.php">
+								<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
+								<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
+								<input type="hidden" name="id_file" value="<?php echo $donnees['id']; ?>">
+								<input type="submit" value="Ajouter aux favoris">
+							</form>
+		<?php			
+						}
+		?>					
+						<form method="post" action="show_audio.php">
 							<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
-							<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-							<input type="hidden" name="id_file" value="<?php echo $donnees['id']; ?>">
-							<input type="submit" value="Ajouter aux favoris">
+							<input type="hidden" name="description" value="<?php echo $donnees['description']; ?>">
+							<input type="hidden" name="extension" value="<?php echo $donnees['extension']; ?>">
+							<input type="submit" value="Ecouter l'audio">
 						</form>
 		<?php
 					}
@@ -117,12 +132,23 @@ $module=$_GET['module'];
 						echo     $donnees['categorie']."<br>";
 						echo     $donnees['id_user']."<br>";
 						echo     $donnees['date_upload']."<br><br>";
-		?>
-						<form method="post" action="add_fav.php">
+						
+						if ($_SESSION['statut'] >= 1){
+		?>				
+							<form method="post" action="add_fav.php">
+								<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
+								<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
+								<input type="hidden" name="id_file" value="<?php echo $donnees['id']; ?>">
+								<input type="submit" value="Ajouter aux favoris">
+							</form>
+		<?php			
+						}
+		?>					
+						<form method="post" action="show_ebook.php">
 							<input type="hidden" name="titre" value="<?php echo $donnees['titre']; ?>">
-							<input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-							<input type="hidden" name="id_file" value="<?php echo $donnees['id']; ?>">
-							<input type="submit" value="Ajouter aux favoris">
+							<input type="hidden" name="description" value="<?php echo $donnees['description']; ?>">
+							<input type="hidden" name="extension" value="<?php echo $donnees['extension']; ?>">
+							<input type="submit" value="Lire l'E-book">
 						</form>
 		<?php
 					}

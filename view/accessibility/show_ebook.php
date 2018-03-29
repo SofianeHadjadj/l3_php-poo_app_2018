@@ -33,15 +33,13 @@ else {
 		<?php include('conservationConfortLecture.php'); 
 			$nom = $_POST['titre'].".".$_POST['extension'];
 			$lien = "../../files/upload/".$nom;
-			$type = "video/".$_POST['extension'];
+			$type = "ebook/".$_POST['extension'];
 
 		?>
 
-		<div>
-			<video width="600" controls>
-				<source src="<?php echo $lien;  ?>" type="<?php if ($_POST['extension'] == "flv") {echo "video/x-flv";} else if ($_POST['extension'] == "mkv") {echo "video/webm";} else {echo $type;}   ?>" />
-			</video>		
-		</div>
+		<div style="margin-right: 30px">
+            <iframe src="<?php echo $lien;  ?>" width="550px" height="350px"></iframe>  
+        </div>		
 		<br>
 		<div style="width: 500px; border: 1px solid black;text-align: justify;padding: 50px">
 			<?php echo $_POST['description'];  ?>

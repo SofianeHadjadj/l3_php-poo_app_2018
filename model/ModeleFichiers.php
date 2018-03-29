@@ -28,6 +28,101 @@ class ModeleFichier extends db {
         die('<META HTTP-equiv="refresh" content=0;URL=index.php>');
     }
 
+
+    public function viewCarousel1() {
+        $sql = 'SELECT * FROM fichiers WHERE type = "vid" ORDER BY id DESC LIMIT 1';
+        $requete=$this->connect()->query($sql);
+        $requete->execute();
+        while ($data = $requete->fetch()) {
+            echo "<h4>Titre</h4>";
+            echo "<p>".$data['titre']."</p>";
+            echo "<h4>Description</h4>";
+            echo "<p style='text-align: justify;'>".$data['description']."</p>";
+
+            $sql2 = 'SELECT * FROM utilisateurs WHERE id="'.$data['id_user'].'"';
+            $requete2=$this->connect()->query($sql2);
+            $requete2->execute();
+            while ($data2 = $requete2->fetch()) {
+                echo "<h4>Uploader</h4>";
+                echo "<p style='display: inline-block;'>".$data2['nom']." ".$data2['prenom']."</p>";               
+            }
+            $requete2->closeCursor();
+            echo '<form method="post" action="">
+                        <input type="hidden" name="type" value="'.$data['type'].'">
+                        <input type="hidden" name="titre" value="'.$data['titre'].'">
+                        <input type="hidden" name="description" value="'.$data['description'].'">
+                        <input type="hidden" name="extension" value="'.$data['extension'].'">
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="float: right; margin-right: 20px;">
+                            <i class="material-icons" role="presentation">input</i>
+                            <span class="visuallyhidden">View</span>
+                        </button>  
+                  </form>';             
+        }
+    }
+
+
+    public function viewCarousel2() {
+        $sql = 'SELECT * FROM fichiers WHERE type = "aud" ORDER BY id DESC LIMIT 1';
+        $requete=$this->connect()->query($sql);
+        $requete->execute();
+        while ($data = $requete->fetch()) {
+            echo "<h4>Titre</h4>";
+            echo "<p>".$data['titre']."</p>";
+            echo "<h4>Description</h4>";
+            echo "<p style='text-align: justify;'>".$data['description']."</p>";
+
+            $sql2 = 'SELECT * FROM utilisateurs WHERE id="'.$data['id_user'].'"';
+            $requete2=$this->connect()->query($sql2);
+            $requete2->execute();
+            while ($data2 = $requete2->fetch()) {
+                echo "<h4>Uploader</h4>";
+                echo "<p style='display: inline-block;'>".$data2['nom']." ".$data2['prenom']."</p>";
+            }
+            $requete2->closeCursor();
+            echo '<form method="post" action="">
+                        <input type="hidden" name="type" value="'.$data['type'].'">
+                        <input type="hidden" name="titre" value="'.$data['titre'].'">
+                        <input type="hidden" name="description" value="'.$data['description'].'">
+                        <input type="hidden" name="extension" value="'.$data['extension'].'">
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="float: right; margin-right: 20px;">
+                            <i class="material-icons" role="presentation">input</i>
+                            <span class="visuallyhidden">View</span>
+                        </button>  
+                  </form>'; 
+        }
+    } 
+
+
+    public function viewCarousel3() {
+        $sql = 'SELECT * FROM fichiers WHERE type = "eb" ORDER BY id DESC LIMIT 1';
+        $requete=$this->connect()->query($sql);
+        $requete->execute();
+        while ($data = $requete->fetch()) {
+            echo "<h4>Titre</h4>";
+            echo "<p>".$data['titre']."</p>";
+            echo "<h4>Description</h4>";
+            echo "<p style='text-align: justify;'>".$data['description']."</p>";
+
+            $sql2 = 'SELECT * FROM utilisateurs WHERE id="'.$data['id_user'].'"';
+            $requete2=$this->connect()->query($sql2);
+            $requete2->execute();
+            while ($data2 = $requete2->fetch()) {
+                echo "<h4>Uploader</h4>";
+                echo "<p style='display: inline-block;'>".$data2['nom']." ".$data2['prenom']."</p>";
+            }
+            $requete2->closeCursor();
+            echo '<form method="post" action="">
+                        <input type="hidden" name="type" value="'.$data['type'].'">
+                        <input type="hidden" name="titre" value="'.$data['titre'].'">
+                        <input type="hidden" name="description" value="'.$data['description'].'">
+                        <input type="hidden" name="extension" value="'.$data['extension'].'">
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="float: right; margin-right: 20px;">
+                            <i class="material-icons" role="presentation">input</i>
+                            <span class="visuallyhidden">View</span>
+                        </button>  
+                  </form>'; 
+        }
+    }       
    
 
     public function favoris() {
@@ -98,7 +193,7 @@ class ModeleFichier extends db {
         $result->execute();
         while ($data = $result->fetch()) {
             if ($data['type'] == "vid") {
-                echo "<li>";
+                echo "<li style='margin-bottom:10px;'>";
                 echo $data["titre"]." ";
                 if ($data["statut"] == 1) {
                     echo "<span style='color:#00AE11'>actif</span>
@@ -129,7 +224,7 @@ class ModeleFichier extends db {
         $result->execute();
         while ($data = $result->fetch()) {
             if ($data['type'] == "aud") {
-                echo "<li>";
+                echo "<li style='margin-bottom:10px;'>";
                 echo $data["titre"]." ";
                 if ($data["statut"] == 1) {
                     echo "<span style='color:#00AE11'>actif</span>
@@ -160,7 +255,7 @@ class ModeleFichier extends db {
         $result->execute();
         while ($data = $result->fetch()) {
             if ($data['type'] == "eb") {
-                echo "<li>";
+                echo "<li style='margin-bottom:10px;'>";
                 echo $data["titre"]." ";
                 if ($data["statut"] == 1) {
                     echo "<span style='color:#00AE11'>actif</span>
