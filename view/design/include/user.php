@@ -39,7 +39,7 @@
 
           <form method="post" action="../../index.php">
             <input type="hidden" name="mode" value="access">
-            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add2">
               Confort de lecture
             </button>            
           </form>

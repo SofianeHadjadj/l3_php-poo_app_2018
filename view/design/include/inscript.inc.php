@@ -1,11 +1,11 @@
       <header class="mdl-layout__header mdl-layout__header--scroll" style="background-color: #424242">
         <div class=" mdl-layout__header-row">
 
-          <form method="post">
+          <form method="post" action="../../index.php">
             <input type="hidden" name="mode" value="access">
-            <a href="../../index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-layout--small-screen-only" id="add">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-layout--small-screen-only" id="add">
               Confort de lecture
-            </a>            
+            </button>            
           </form>
 
         </div>
@@ -24,11 +24,11 @@
               <i class="material-icons">perm_identity</i>
             </button>
 
-          <form method="post">
+          <form method="post" action="../../index.php">
             <input type="hidden" name="mode" value="access">
-            <a href="../../index.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add2">
               Confort de lecture
-            </a>            
+            </button>            
           </form>
 
         </div>
